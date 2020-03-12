@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Exercicicio01AED",
+            "request": "launch",
+            "mainClass": "exercicicio01aed.Exercicicio01AED",
+            "projectName": "AlgorithmAndStructureOfData_8c08dc03"
+        }
+    ]
+}
