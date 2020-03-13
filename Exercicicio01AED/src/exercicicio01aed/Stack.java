@@ -14,7 +14,9 @@ import java.util.*;
 public class Stack {
    int stack[] = new int[5];
    int top = 0;
-   public void push(int data)
+   String whoIAm = "I'm Stack Structure!";
+
+   public void push(final int data)
    {
        stack[top] = data;
        top++;

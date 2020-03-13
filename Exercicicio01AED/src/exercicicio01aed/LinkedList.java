@@ -11,7 +11,7 @@ package exercicicio01aed;
  */
 public class LinkedList {
     Node head; // the default value its null
-    
+    String whoIAm = "I'm LinkedList Structure!";
     // insert to the end function
     public void insert(int data)
     {

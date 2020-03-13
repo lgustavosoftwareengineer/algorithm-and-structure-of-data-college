@@ -16,7 +16,9 @@ public class Queue {
     int size;
     int front;
     int rear;
+    String whoIAm = "I'm Queue Structure!";
     
+    // function enqueue
     public void enqueue(int data)
     {
         queue[rear] = data;
@@ -26,6 +28,15 @@ public class Queue {
         size++;
     }
     
+    // funtion dequeue
+    public int deQueue()
+    {
+        int data = queue[front];
+        front = (front + 1)%5;
+        size--;
+        return data;
+    }
+
     // Function thats show the elements in the queue
     public void show ()
     {
@@ -33,13 +44,5 @@ public class Queue {
         {
             System.out.println(queue[(front+i)%5] + " ");
         }
-    }
-    // 
-    public int deQueue()
-    {
-        int data = queue[front];
-        front = (front + 1)%5;
-        size--;
-        return data;
     }
 }
