@@ -21,10 +21,11 @@ public class Queue {
     // function enqueue
     public void enqueue(int data)
     {
+        // O valor será adicionado na ultima posição da fila
         queue[rear] = data;
-        // The new rear gonna be the next data thats gonna come
+        // espécie de contador que serve para dizer quem será a proxima cauda
         rear = (rear + 1)%5;
-        // Important to when i gonna use the dequeue to remove the first element of queue
+        // importante para saber o valor o indice do elemento que foi adicionado/saber se a lista está cheia
         size++;
     }
     

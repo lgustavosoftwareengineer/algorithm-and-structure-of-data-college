@@ -11,18 +11,7 @@ import exercicicio01aed.LinkedList;
 public class Exercicicio01AED {
    
     public static void main(final String[] args) {
-        Stack s = new Stack();
-        s.push(1);
-        s.push(2);
-        s.show();
-        s.push(4);
-        s.push(5);
-        s.push(6);
-        s.show();
-        s.push(7);
-        s.show();
         
-        /*
         // Stack Struture
         System.out.println("--------------------------------------------");
         Stack s = new Stack();
@@ -42,19 +31,19 @@ public class Exercicicio01AED {
         // Queue Struture
         Queue q = new Queue();
         System.out.println(q.whoIAm);
-        System.out.println("Putting elements using the enqueue function: ");
+        System.out.println("Putting elements using the enqueue function: 1,2,3,4,5 ");
         q.enqueue(1);
         q.enqueue(2);
         q.enqueue(3);
         q.enqueue(4);
         q.enqueue(5);
-        System.out.println("Removing elements using the deQueue function: ");
+        System.out.println("Removing elements using the deQueue function 2 times... ");
         q.deQueue();
         q.deQueue();
-        System.out.println("Putting elements using the enqueue function: ");
+        System.out.println("Putting elements using the enqueue function: 1 and 6 ");
         q.enqueue(1);
-        q.enqueue(1);
-        System.out.println("Removing elements using the deQueue function: ");
+        q.enqueue(6);
+        System.out.println("Removing elements using the deQueue function... ");
         q.deQueue();
         System.out.println("Showing elements using the show function: ");
         q.show();
@@ -62,17 +51,17 @@ public class Exercicicio01AED {
         // LinkedList Struture
         final LinkedList l = new LinkedList();
         System.out.println(l.whoIAm);
-        System.out.println("including elements using the insert function: ");
+        System.out.println("including elements using the insert function: 5 and 2 ");
         l.insert(5);
         l.insert(2);
-        System.out.println("including elements using the insertAt function: ");
+        System.out.println("including elements using the insertAt function: putting 10 in the index 1");
         l.insertAt(1, 10);
-        System.out.println("Deleting elements using the delete function: ");
+        System.out.println("Deleting elements using the delete function: deleting the element of index 1");
         l.deleteAt(1);
         System.out.println("Showing elements using the show function: ");
         l.show();
         System.out.println("--------------------------------------------");
-        */
+
     }
     
 }
