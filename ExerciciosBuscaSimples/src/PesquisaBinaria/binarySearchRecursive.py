@@ -1,11 +1,11 @@
-def researchAgentsRecursive(list, identifier):
+def binaryResearch(list, id):
     if(len(list) > 1):
         mid = len(list) // 2
-        if (list[mid].identifier == identifier):
+        if (list[mid].identifier == id):
             return list[mid]
-        elif (list[mid].identifier < identifier): # 6 < 7
-           return researchAgentsRecursive(list[mid:], identifier)
+        elif (list[mid].identifier < id): # 6 < 7
+           return binaryResearch(list[mid:], id)
         else:
-            return researchAgentsRecursive(list[:mid], identifier)
+            return binaryResearch(list[:mid], id)
     else: 
         return None

@@ -1,4 +1,4 @@
-def researchAgentsIterative(list, id):
+def binaryResearch(list, id):
     newList = list
     for i in list:
         if (len(newList) >= 1):

@@ -1,6 +1,7 @@
 from utils.Agent import Agent
-from PesquisaBinaria.binarySearchRecursive import researchAgentsRecursive
-from PesquisaBinaria.binarySearchIterative import researchAgentsIterative
+from PesquisaBinaria.binarySearchRecursive import binaryResearch as binarySearchRecursive
+from PesquisaBinaria.binarySearchIterative import binaryResearch as binarySearchIterative
+from PesquisaSequencial.sequencialSearch import sequencialSearch
 
 ValorantCharacters = []
 
@@ -17,10 +18,41 @@ ValorantCharacters.append(Agent(10, "Jett"))
 ValorantCharacters.append(Agent(11, "Reyna"))
 ValorantCharacters.append(Agent(12, "Killjoy"))
 
-#Agent = researchAgentsRecursive(ValorantCharacters, 6)
-Agent = researchAgentsIterative(ValorantCharacters, 2)
+# =====================================================================
+#                    ITERATIVE BINARY SEARCH
+# =====================================================================
+AgentIterativeBinarySearch = binarySearchIterative(ValorantCharacters, 2)
+print('--------------------------')
+print('Iterative binary search example: ')
+print('--------------------------')
 
-if Agent is not None:
-    print(Agent.name)
+if AgentIterativeBinarySearch is not None:
+    print('Response: ' + AgentIterativeBinarySearch.name)
+else:
+    print('The value isnt in ValorantCharacters or the list is invalid')
+
+# =====================================================================
+#                    RECURSIVE BINARY SEARCH
+# =====================================================================
+AgentRecursiveBinarySearch = binarySearchRecursive(ValorantCharacters, 2)
+print('--------------------------')
+print('Recursive binary search example: ')
+print('--------------------------')
+
+if AgentRecursiveBinarySearch is not None:
+    print('Response: ' + AgentRecursiveBinarySearch.name)
+else:
+    print('The value isnt in ValorantCharacters or the list is invalid')
+
+# =====================================================================
+#                    SEQUENCIAL SEARCH
+# =====================================================================
+AgentSequencialSearch = sequencialSearch(ValorantCharacters, 3)
+print('--------------------------')
+print('Sequencial search example: ')
+print('--------------------------')
+
+if AgentSequencialSearch is not None:
+    print('Response: ' + AgentSequencialSearch.name)
 else:
     print('The value isnt in ValorantCharacters or the list is invalid')
