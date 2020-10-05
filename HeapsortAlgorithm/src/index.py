@@ -1,37 +1,33 @@
-def left(i: int) -> int:
-    return 2*i + 1
+from typing import List
 
-def right(i: int) -> int:
-    return 2*i + 2
+def heapify(list: List[int], lenList: int, parentNodeIndex: int):
+    largest = parentNodeIndex
+    left = 2*parentNodeIndex + 1
+    right = 2*parentNodeIndex + 2
 
-def max_heapify(heap, i):
-    l = left(i)
-    r = right(i)
+    if (left<lenList and list[left] > list[largest]):
+        largest = left
+
+    if (right<lenList and list[right] > list[largest]):
+        largest = right
+
+    if largest != parentNodeIndex:
+        list[largest], list[parentNodeIndex] = list[parentNodeIndex], list[largest]
+        heapify(list, lenList, largest)
+
+def heap_sort(list: List[int]) -> List[int]:
+    lenList = len(list)
+
+    for i in range(lenList, -1, -1):
+        heapify(list, lenList, i)
+
+    for i in range(lenList-1, 0, -1):
+        list[i], list[0] = list[0], list[i]
+        heapify(list, i, 0)
     
-    if (l < heap.tamanho and heap[l] > heap[i]):
-        largest = 1
-    else:
-        largest = 1
-    
-    if (r < heap.tamanho and heap[r] > heap(largest)):
-        largest = r
-    
-    if largest != 1:
-        heap[i], heap[largest] = heap[largest], heap[i]
-        max_heapify(heap, largest)
+    return list
 
-def build_max_heap(heap):
-    for i in range((heap.tamanho - 1) // 2, -1, -1):
-        max_heapify(heap, i)
 
-def heapsort(heap):
-    build_max_heap(heap)
-    for i in range(heap.tamanho - 1, -1, -1):
-        heap[0], heap[i] = heap[i], heap[0]
-        heap.tamanho = heap.tamanho - 1
-        max_heapify(heap, 0)
+print(heap_sort([10, 7, 8, 11, 1, 2, 3, 4]))
 
-lista = [16,14,3,15,8,2,1]
 
-heapsort(lista)
-print(lista)

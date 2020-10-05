@@ -1,35 +1,24 @@
-def heapify(list, lenList, parentNodeIndex):
-    largest = parentNodeIndex
-    left = 2*parentNodeIndex + 1
-    right = 2*parentNodeIndex + 2
 
-    if (left<lenList and list[left] > list[largest]):
-        largest = left
+from typing import List
 
-    if (right<lenList and list[right] > list[largest]):
-        largest = right
 
-    if largest != parentNodeIndex:
-        list[largest], list[parentNodeIndex] = list[parentNodeIndex], list[largest]
-        heapify(list, lenList, largest)
-    
-    else: 
+def quick_sort(list: List[int]) -> list:
+    length = len(list)
+    if length <= 1:
         return list
+    else:
+        pivot: int = list.pop()
 
+    itens_greater: List[int] = []
+    itens_lower: List[int] = []
 
-def heap_sort(list):
-    lenList = len(list)
+    for item in list:
+        if item > pivot:
+            itens_greater.append(item)
+        else:
+            itens_lower.append(item)
 
-    for i in range(lenList, -1, -1):
-        heapify(list, lenList, i)
+    return quick_sort(itens_lower) + [pivot] + quick_sort(itens_greater) 
 
-    for i in range(lenList-1, 0, -1):
-        list[i], list[0] = list[0], list[i]
-        heapify(list, i, 0)
-    
-    return list
-
-
-print(heap_sort([10, 7, 8, 11, 1, 2, 3, 4]))
-
-
+list = [1,4,2,5,8,3,5]
+print(quick_sort(list))
