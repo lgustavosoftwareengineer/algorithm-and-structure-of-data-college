@@ -29,7 +29,7 @@ print('--------------------------')
 if AgentIterativeBinarySearch is not None:
     print('Response: ' + AgentIterativeBinarySearch.name)
 else:
-    print('The value isnt in ValorantCharacters or the list is invalid')
+    print("The value isn't in ValorantCharacters or the list is invalid")
 
 # =====================================================================
 #                    RECURSIVE BINARY SEARCH
@@ -42,7 +42,8 @@ print('--------------------------')
 if AgentRecursiveBinarySearch is not None:
     print('Response: ' + AgentRecursiveBinarySearch.name)
 else:
-    print('The value isnt in ValorantCharacters or the list is invalid')
+    print("The value isn't in ValorantCharacters or the list is invalid")
+
 
 # =====================================================================
 #                    SEQUENCIAL SEARCH

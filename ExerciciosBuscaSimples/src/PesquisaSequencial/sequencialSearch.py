@@ -4,4 +4,3 @@ def sequencialSearch(list, id):
             return i
     return None
 
-
